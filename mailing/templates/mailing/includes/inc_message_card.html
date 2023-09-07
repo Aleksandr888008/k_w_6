@@ -1,0 +1,19 @@
+{% load mailing_tags %}
+
+<div class="col-lg-8">
+
+    <tbody>
+    <tr>
+        <th scope="row">{{ message.id }}</th>
+        <td>{{ message.name }}</td>
+        <td>{{ message.body }}</td>
+        <td><a class="btn btn-outline-primary" href="{% url 'mailing:message_item' message.pk %}" role="button">Подробнее
+            &raquo;</a></td>
+        <td><a class="btn btn-outline-success" href="{% url 'mailing:message_update' message.pk %}" role="button">Изменить
+            &raquo;</a></td>
+        <td><a class="btn btn-outline-danger" href="{% url 'mailing:message_delete' message.pk %}" role="button">Удалить
+            &raquo;</a></td>
+    </tr>
+    </tbody>
+
+</div>
