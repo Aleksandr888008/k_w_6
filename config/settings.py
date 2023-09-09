@@ -40,9 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'crispy_forms',
+    'crispy_bootstrap5',
+
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     'mailing.apps.MailingConfig'
+
 ]
 
 MIDDLEWARE = [
@@ -167,3 +171,14 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Europe/Moscow'
+
+
+#django-crispy-forms
+# https://django-crispy-forms.readthedocs.io/en/latest/install.html
+#CRISPY_TEMPLATE_PACK = 'uni_form'
+
+# End django-crispy-forms
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
